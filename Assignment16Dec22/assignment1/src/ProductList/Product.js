@@ -2,7 +2,8 @@ import React from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 import Table from 'react-bootstrap/Table';
-import Card from 'react-bootstrap/Card'
+import Card from 'react-bootstrap/Card';
+import Row from 'react-bootstrap/Row';
 
 const Product = () => {
     const data = [
@@ -51,6 +52,7 @@ const Product = () => {
                         )}
                 </tbody >
             </Table >
+            <Row xs={1} md={2} className="g-4">
             {data.map(
                 (element) => {
                     return (
@@ -64,6 +66,7 @@ const Product = () => {
                             </Card.Body>
                         </Card>)
                 })}
+                </Row>
         </div>
     )
 }
